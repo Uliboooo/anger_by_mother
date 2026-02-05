@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Anger of mother",
+  "version": "1.0",
+  "description": "Stop wasting time on X and learn on Hacker News.",
+  "host_permissions": [
+    "*://x.com/*",
+    "*://*.x.com/*",
+    "*://twitter.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://x.com/*", 
+        "*://*.x.com/*", 
+        "*://twitter.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
